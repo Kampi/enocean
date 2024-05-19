@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 from __future__ import print_function, unicode_literals, division, absolute_import
-from enum import IntEnum
 
+from enum import IntEnum
 
 # EnOceanSerialProtocol3.pdf / 12
 class PACKET(IntEnum):
@@ -25,7 +25,6 @@ class PACKET(IntEnum):
     RADIO_802_15_4 = 0x10
     COMMAND_2_4 = 0x11
 
-
 # EnOceanSerialProtocol3.pdf / 18
 class RETURN_CODE(IntEnum):
     OK = 0x00
@@ -34,7 +33,6 @@ class RETURN_CODE(IntEnum):
     WRONG_PARAM = 0x03
     OPERATION_DENIED = 0x04
 
-
 # EnOceanSerialProtocol3.pdf / 20
 class EVENT_CODE(IntEnum):
     SA_RECLAIM_NOT_SUCCESFUL = 0x01
@@ -42,7 +40,6 @@ class EVENT_CODE(IntEnum):
     SA_LEARN_ACK = 0x03
     CO_READY = 0x04
     CO_EVENT_SECUREDEVICES = 0x05
-
 
 # EnOcean_Equipment_Profiles_EEP_V2.61_public.pdf / 8
 class RORG(IntEnum):
@@ -61,13 +58,11 @@ class RORG(IntEnum):
     SEC_ENCAPS = 0x31
     UTE = 0xD4
 
-
 # Results for message parsing
 class PARSE_RESULT(IntEnum):
     OK = 0x00
     INCOMPLETE = 0x01
     CRC_MISMATCH = 0x03
-
 
 # Data byte indexing
 # Starts from the end, so works on messages of all length.
@@ -81,7 +76,6 @@ class DB0(object):
     BIT_6 = -7
     BIT_7 = -8
 
-
 class DB1(object):
     BIT_0 = -9
     BIT_1 = -10
@@ -91,7 +85,6 @@ class DB1(object):
     BIT_5 = -14
     BIT_6 = -15
     BIT_7 = -16
-
 
 class DB2(object):
     BIT_0 = -17
@@ -103,7 +96,6 @@ class DB2(object):
     BIT_6 = -23
     BIT_7 = -24
 
-
 class DB3(object):
     BIT_0 = -25
     BIT_1 = -26
@@ -113,7 +105,6 @@ class DB3(object):
     BIT_5 = -30
     BIT_6 = -31
     BIT_7 = -32
-
 
 class DB4(object):
     BIT_0 = -33
@@ -125,7 +116,6 @@ class DB4(object):
     BIT_6 = -39
     BIT_7 = -40
 
-
 class DB5(object):
     BIT_0 = -41
     BIT_1 = -42
@@ -135,7 +125,6 @@ class DB5(object):
     BIT_5 = -46
     BIT_6 = -47
     BIT_7 = -48
-
 
 class DB6(object):
     BIT_0 = -49

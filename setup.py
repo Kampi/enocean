@@ -5,25 +5,25 @@ except ImportError:
     from distutils.core import setup
 
 setup(
-    name='enocean',
-    version='0.60.1',
-    description='EnOcean serial protocol implementation',
-    author='Kimmo Huoman',
-    author_email='kipenroskaposti@gmail.com',
-    url='https://github.com/kipe/enocean',
-    packages=[
-        'enocean',
-        'enocean.protocol',
-        'enocean.communicators',
+    name = "enocean",
+    version = "1.0.0",
+    description = "EnOcean serial protocol implementation",
+    author = "Daniel Kampert",
+    author_email = "kontakt@daniel-kampert.de",
+    url = "https://github.com/kampi/enocean",
+    packages = [
+        "enocean",
+        "enocean.protocol",
+        "enocean.communicators",
     ],
-    scripts=[
-        'examples/enocean_example.py',
+    scripts = [
+        "examples/enocean_example.py",
     ],
-    package_data={
-        '': ['EEP.xml']
+    package_data = {
+        "": ["EEP.xml"]
     },
-    install_requires=[
-        'enum-compat>=0.0.2',
-        'pyserial>=3.0',
-        'beautifulsoup4>=4.3.2',
+    install_requires = [
+        "enum-compat> = 0.0.2",
+        "pyserial> = 3.0",
+        "beautifulsoup4> = 4.3.2",
     ])
